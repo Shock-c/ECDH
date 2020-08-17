@@ -5,7 +5,7 @@ from tinyec import registry
 
 
 def compress(pubKey):
-    print("compress",hex(pubKey.x),hex(pubKey.y % 2)[2:])
+    print("compress",hex(pubKey.x),hex(pubKey.y))
     return hex(pubKey.x) + hex(pubKey.y % 2)[2:]
 
 curve = registry.get_curve('secp224r1') #选择曲线
